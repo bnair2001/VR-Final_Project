@@ -31,6 +31,15 @@ public class ObjectShake : MonoBehaviour {
 				temp_shake_intensity -= shake_decay;
 		}
 	}
+
+	void onCollisionEnter2D(Collision2D col) 
+	{
+		// When target is hit
+		if(col.gameObject.tag == "student")
+		{
+			Debug.Log("Target was Hit!");
+		}
+	}
 	
 	void Shake(){
 			originPosition = transform.position;
