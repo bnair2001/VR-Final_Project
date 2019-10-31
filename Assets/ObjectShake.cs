@@ -32,13 +32,17 @@ public class ObjectShake : MonoBehaviour {
 		}
 	}
 
-	void onCollisionEnter2D(Collision2D col) 
+	void OnCollisionEnter(Collision collision)
 	{
-		// When target is hit
-		if(col.gameObject.tag == "student")
+		//Check for a match with the specified name on any GameObject that collides with your GameObject
+		if (collision.gameObject.name == "student")
 		{
-			Debug.Log("Target was Hit!");
+			//If the GameObject's name matches the one you suggest, output this message in the console
+			Debug.Log("Hit student");
+			shake_decay = 0.0f;
+			shake_intensity = 0.0f;
 		}
+			
 	}
 	
 	void Shake(){
