@@ -41,6 +41,7 @@ public class ObjectShake : MonoBehaviour {
 			Debug.Log("Hit student");
 			shake_decay = 0.0f;
 			shake_intensity = 0.0f;
+			temp_shake_intensity = 0;
 		}
 			
 	}
